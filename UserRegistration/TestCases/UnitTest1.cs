@@ -53,6 +53,20 @@ namespace UserRegistrationTest
             // Assert
             Assert.AreEqual(expected, result);
         }
+        [Test]
+        public void MobileNumber()
+        {
+            // Arrange 
+            bool expected = true;
+            string mobile = "91 7768757370";
+            UserRegistrationDetails user = new UserRegistrationDetails();
+
+            // Act
+            bool result = user.ValidateMobileNumber(mobile);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
 
 
     }
